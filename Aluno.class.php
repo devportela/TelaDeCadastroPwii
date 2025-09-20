@@ -4,6 +4,7 @@ class Aluno{
     private $rm;
     private $nome;
     private $email;
+    private $senha;
     private $cpf;
     private $pdo;
 
@@ -35,6 +36,11 @@ class Aluno{
     public function getCpf(){
         return $this->cpf;
     }
+    public function getSenha(){
+        return $this -> senha;
+    }
+
+    
 
     public function setRm($rm){
         $this->rm = $rm ;
@@ -45,13 +51,17 @@ class Aluno{
     public function setEmail($email){
         $this->email = $email ;
     }
+      public function setSenha($senha){
+     $this ->senha = $senha;
+    }
+
     public function setCpf($cpf){
         $this->cpf = $cpf ;
     }
 
-    public function cadastrar($rm, $nome, $email, $cpf){
+    public function cadastrar($rm, $nome, $email,$senha,$cpf,){
         # criar uma variavel com a conulta SQL
-        $sql = "INSERT INTO aluno set rm = :r, nome = :n, email = :e, cpf = :c";
+        $sql = "INSERT INTO aluno set rm = :r, nome = :n, email = :e,senha = :s, cpf = :c";
         
         # se o metodo tem parametros, temos que usar o apelido para passar os valores 
         # e chamar o metodo prepare do PDO
@@ -61,6 +71,7 @@ class Aluno{
         $sql-> bindValue(":r", $rm);
         $sql-> bindValue(":n", $nome);
         $sql-> bindValue(":e", $email);
+        $sql-> bindValue(":s", $senha);
         $sql-> bindValue(":c", $cpf);
 
         #executar o comando

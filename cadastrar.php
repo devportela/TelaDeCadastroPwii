@@ -22,6 +22,13 @@
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" required>
       </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="senha" id="senha" name="senha" required>
+      </div>
+
+
       <div class="form-group">
         <label for="cpf">CPF</label>
         <input type="text" id="cpf" name="cpf" pattern="\d{11}" title="Digite apenas os 11 números do CPF" required>

@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $rm    = $_POST['rm'] ?? '';
     $nome  = $_POST['nome'] ?? '';
     $email = $_POST['email'] ?? '';
+    $senha = $_POST['senha'] ?? '';
     $cpf   = $_POST['cpf'] ?? '';
 
     $aluno = new Aluno();
@@ -14,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($aluno->consultar($email)) {
             echo "<script>alert('Já existe um aluno cadastrado com esse e-mail.'); window.history.back();</script>";
         } else {
-            if ($aluno->cadastrar($rm, $nome, $email, $cpf)) {
+            if ($aluno->cadastrar($rm, $nome, $email,$senha,$cpf)) {
                 echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='index.html';</script>";
             } else {
                 echo "<script>alert('Erro ao cadastrar. Tente novamente.'); window.history.back();</script>";
