@@ -1,1 +1,1 @@
-<img width="978" height="600" alt="cadastro2" src="https://github.com/user-attachments/assets/fbd6e0e6-d753-4610-a464-c30b2fe48455" />
+<img width="1365" height="681" alt="cadastro" src="https://github.com/user-attachments/assets/cf9be3a4-77f8-4393-8cbb-188ed7de49e3" />
